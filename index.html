@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profession</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black;
+            color: whitesmoke;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container {
+            width:96%;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        h2 {
+            margin-left: 20px;
+            margin-top: 40px;
+            font-size: 1.5em;
+        }
+        .form-container {
+            width: 100%;
+            margin-top: 10px;
+            padding: 20px;
+        }
+        
+        .form-fields {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .input-group {
+            display: flex;
+            flex-direction: column;
+        }
+        input {
+            padding: 10px;
+            background-color: black;
+            border: 1px solid white;
+            border-radius: 2px;
+            color: white;
+            font-size: 1em;
+            width: 18rem;
+            height: 2.2rem;
+        }
+        button {
+            padding: 10px;
+            width: 9rem;
+            height: 2.3rem;
+            background-color: white;
+            border: none;
+            border-radius: 1px;
+            color: black;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #7a7a7a;
+        }
+        .message{
+            padding-left: 20px;
+            font-size: 17px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #error {
+            display: none;
+            color: rgb(216, 62, 62);
+        }
+        #success {
+            display: none;
+            color: rgb(89, 204, 50);
+        }
+        label {
+            margin-bottom: 8px;
+            font-size: 1em;
+        }
+        h3 {
+            padding-left: 20px;
+        }
+        .employees-list {
+            padding-left: 20px;
+            padding: 10px;;
+        }
+        #employeeCount {
+            margin-top: 15px;
+            padding-left: 20px;
+            font-size: 1.0em;
+            display: none;
+        }
+        .employees {
+            padding: 10px 20px 20px 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .employee {
+            margin-bottom: 10px;
+            height: 40px;
+            width: 34%;
+            display: flex;
+            align-items: center;
+        }
+        .obj {
+            border: 1px solid white;
+            width: 80%;
+            height: 100%;
+            padding-left: 2%;
+            padding-right: 2%;
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 15px;
+        }
+        .delete {
+            margin: 10px 10px 10px 10px;
+            font-size: 12px;
+            
+            width: 18%;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>New Employees</h2>
+        <div class="form-container">
+            <div class="form-fields">
+                <div class="input-group">
+                    <label for="name">Enter Name</label>
+                    <input type="text" id="name" placeholder="Enter Name">
+                </div>
+                <div class="input-group">
+                    <label for="profession">Enter Profession</label>
+                    <input type="text" id="profession" placeholder="Enter Profession">
+                </div>
+                <div class="input-group">
+                    <label for="age">Enter Age</label>
+                    <input type="number" id="age" placeholder="Enter Age">
+                </div>
+            </div>
+            <button type="submit" id="addUserBtn">Add User</button>
+        </div>
+        <div class="message">
+            <p id="success">Success: Employee Added!</p>
+            <p id="error">Error: Please Make sure All the fields are filled before adding in an employee!</p>
+        </div>
+        <div id="employees-list">
+            <h3>Added Employees</h3>
+            <p id="employeeCount">You have 0 Employees.</p>
+        </div>
+        <div class="employees">
+            
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
